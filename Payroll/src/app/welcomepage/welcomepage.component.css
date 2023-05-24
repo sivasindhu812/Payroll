@@ -1,0 +1,22 @@
+body{
+    background-image: url("https://thumbs.dreamstime.com/b/payroll-time-sheet-human-resources-sepia-tone-documents-salary-employee-sheets-place-office-table-cup-coffee-48569096.jpg");
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+   }
+h1{
+    text-align:center;
+}
+h3{
+    text-align:center;
+}
+h2{
+    text-align:center;
+}
+.container{
+    text-align: center;
+    }
+    #btn{
+    font-size: 15px;
+    }

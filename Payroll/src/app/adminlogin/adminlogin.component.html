@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body class="body1" align="center" >
+    <div class="login"  >
+        <h1>Admin Login!!!</h1>
+        <br>
+        <form [formGroup]="loginForm">
+            <div class="form-group" >
+                <label >Admin Id  </label> <br>
+                    <input formControlName="adminId" type="number" placeholder="Enter Admin id">
+                
+            </div>
+            <!--<small *ngIf="loginForm.controls['adminId'].dirty && loginForm.hasError('required','adminId')" class="text-danger">*Admin id is required</small>
+            <div class="form-group" >
+                <label>Admin Name <br>
+                    <input formControlName="adminName" type="text" placeholder="Enter Name"   >
+                </label>
+            </div>
+            <small *ngIf="loginForm.controls['adminId'].dirty && loginForm.hasError('required','adminId')" class="text-danger">*Admin id is required</small>
+            <div class="form-group" >
+                <label>Admin Email <br>
+                    <input formControlName="adminEmail" type="email" placeholder="Enter Email"   >
+                </label>
+            </div>  -->
+            <small *ngIf="loginForm.controls['adminId'].dirty && loginForm.hasError('required','adminId')" class="text-danger">*Admin id is required</small>
+            <div class="form-group" >
+                <label>Admin Password </label><br>
+                    <input formControlName="adminPassword" type="password" placeholder="Enter password"   >
+                
+            </div>
+            <small *ngIf="loginForm.controls['adminPassword'].dirty && loginForm.hasError('required','adminPassword')" class="text-danger">*Password is required</small><br>
+              <button (click)="onLogin()" type="submit" class="btn btn-success"  >Submit</button>
+              <br>
+              <br>
+              <div>
+                <button type="submit" class="btn btn-success" routerLink="/Home" >Back</button>
+            </div>
+        </form>
+            
+        <!--</form>-->
+    </div>
+</body>
+</html>

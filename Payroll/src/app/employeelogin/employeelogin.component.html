@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    </style>
+</head>
+<body class="body1" align="center" >
+    <div class="login"  >
+        <h1> Welcome Employee!!!</h1><br>
+        <form [formGroup]="loginForm" >
+            <div class="form-group" >
+                <label >Employee Id  </label> <br>
+                    <input formControlName="employeeId" type="number" placeholder="Enter Employee id">
+            </div>
+        <small *ngIf="loginForm.controls['employeeId'].dirty && loginForm.hasError('required','employeeId')" class="text-danger">*Employee id is required</small>
+            <div class="form-group" >
+                <label>Password </label><br>
+                    <input formControlName="employeePassword" type="password" placeholder="Enter password">
+            </div>
+            <small *ngIf="loginForm.controls['employeePassword'].dirty && loginForm.hasError('required','employeePassword')" class="text-danger">*Password is required</small><br>
+              <button (click)="onLogin()" type="submit" class="btn btn-success"  >Submit</button>
+              <br>
+              <br>
+              <div>
+                <button type="submit" class="btn btn-success" routerLink="/Home" >Back</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<body>
+    <div class="container-fluid mb-5">
+    <form  #deptForm="ngForm" align="center">
+<!--<div class="form-group">
+    <label for="leaveCode">Leave code <input type="number" placeholder="enter leave code" class="form-control" id="leaveCode" required
+        [(ngModel)]="model.leaveCode" name="leaveCode" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Leave Code is required </div>
+    </label>    
+</div>  -->
+<div class="form-group">
+    <label for="employeeId">Employee Id  <input type="number" placeholder="enter Employee Id" class="form-control" id="employeeId" required
+        [(ngModel)]="model.employeeId" name="employeeId" #name1="ngModel">
+        <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Employee Id is required </div>
+    </label>
+</div>
+<!--<div class="form-group">
+    <label for="leaveType">Leave type <select type="text" placeholder="enter leave type" class="form-control" id="leaveType" required
+        [(ngModel)]="model.leaveType" name="leaveType" #name3="ngModel">
+        <option *ngFor="let Leave of type" [value]="leave">{{leave}}</option>
+        </select>
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Leave Type is required </div>
+    </label>
+</div>  -->
+<div class="form-group">
+    <label for="leaveType">Leave type <input type="text" placeholder="enter leave type" class="form-control" id="leaveType" required
+        [(ngModel)]="model.leaveType" name="leaveType" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Leave type is required </div>
+    </label>
+</div>
+<div class="form-group">
+    <label for="fromDate">From Date <input type="date" placeholder="enter from date" class="form-control" id="fromDate" required
+        [(ngModel)]="model.fromDate" name="fromDate" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">From date is required </div>
+    </label>
+</div>
+<div class="form-group">
+    <label for="toDate">To Date <input type="date" placeholder="enter to date" class="form-control" id="toDate" required
+        [(ngModel)]="model.toDate" name="toDate" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">To date is required </div>
+    </label>
+</div>
+<div class="form-group">
+    <label for="leaveReason">Leave Reason <input type="text" placeholder="enter leave reason" class="form-control" id="leaveReason" required
+        [(ngModel)]="model.leaveReason" name="leaveReason" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Leave reason is required </div>
+    </label>
+</div>
+<div class="form-group">
+    <label for="leaveStatus">Leave Status <input type="text" placeholder="enter leave status" class="form-control" id="leaveStatus" required
+        [(ngModel)]="model.leaveStatus" name="leaveStatus" #name3="ngModel">
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Leave Status is required </div>
+    </label>
+</div>
+<div>
+    <button type="submit" class="btn btn-success" [disabled]="!deptForm.form.valid" (click)="save()" >Submit</button>
+</div>
+<br>
+<div>
+    <button type="submit" class="btn btn-success" routerLink="/manage" >Back</button>
+</div>
+</form>
+</div>
+</body>

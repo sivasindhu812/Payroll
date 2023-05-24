@@ -1,0 +1,67 @@
+<div class="container-fluid mb-5">
+    <form  #deptForm="ngForm" align="center">
+<!--<div class="form-group">
+    <label for="allowanceId">Allowance Id  <input type="number" placeholder="enter Allowance Id" class="form-control" id="allowanceId" required
+        [(ngModel)]="model.allowanceId" name="allowanceId" #name1="ngModel">
+        <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Allowance Id is required </div>
+    </label>
+</div>  -->
+<div class="form-group">
+    <label for="employeeId">Employee Id  <input type="number" placeholder="enter Employee Id" class="form-control" id="employeeId" required
+        [(ngModel)]="model.employeeId" name="employeeId" #name1="ngModel">
+        <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Employee Id is required </div>
+    </label>
+</div>
+<!--<div class="form-group">
+    <label for="allowanceType">Allowance type <select type="text" placeholder="enter allowance type" class="form-control" id="allowanceType" required
+        [(ngModel)]="model.allowanceType" name="allowanceType" #name3="ngModel">
+<option *ngFor="let Allowance of type" [value]="allowance">{{allowance}}</option>
+        </select>
+        <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Allowance Type is required </div>
+    </label>
+</div>  -->
+
+<div class="form-group">
+    <label for="allowanceType">Allowance Type  <input type="text" placeholder="enter Allowance Type" class="form-control" id="allowanceType" required
+        [(ngModel)]="model.allowanceType" name="allowanceType" #name1="ngModel">
+        <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Allowance Type is required </div>
+    </label>
+</div>
+
+<div class="form-group">
+    <label for="allowanceAmount">Allowance Amount  <input type="text" placeholder="enter Allowance Amount" class="form-control" id="allowanceAmount" required
+        [(ngModel)]="model.allowanceAmount" name="allowanceAmount" #name1="ngModel">
+        <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Allowance Amount is required </div>
+    </label>
+</div>
+<div>
+    <button type="submit" class="btn btn-success" [disabled]="!deptForm.form.valid" (click)="save()" >Submit</button>
+</div>
+<br>
+<div>
+    <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+</div>
+</form><br><br><br>
+</div>
+
+<div class="table-wrapper">
+<table class="fl-table">
+<thead>
+<tr>
+    <td>Allowance Id   </td>
+    <td>Employee Id    </td>
+    <td>Allowance Type       </td>
+    <td>Allowance Amount       </td>
+</tr>
+</thead>
+<tbody *ngIf="allowances | async as allowances else noData ">
+<tr *ngFor="let allowance of allowances">
+    <td>{{allowance.allowanceId}}</td>
+    <td>{{allowance.employeeId}}</td>
+    <td>{{allowance.allowanceType}}</td>
+    <td>{{allowance.allowanceAmount}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ng-template #noData>No Data Available</ng-template>

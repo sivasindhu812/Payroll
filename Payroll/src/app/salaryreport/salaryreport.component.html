@@ -1,0 +1,41 @@
+<body>
+    <div class="table-wrapper">
+        <br>
+        <h1>Salary Reports</h1>
+        <br>
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <td>SalaryId</td>
+                    <td>EmployeeId  </td>
+                    <td>BasicSalary</td>
+                    <td>HRA  </td>
+                    <td>DA  </td>
+                    <td>Tax  </td>
+                    <td>NetSalary  </td>
+                    <td>PF  </td>
+                    <td>PayDate  </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let d of data;let i = index">
+                    <!--<td>{{d.name}}</td>-->
+                    <td>{{d.salaryId}}</td>
+                    <td>{{d.employeeId}}</td>
+                    <td>{{d.basicSalary}}</td>
+                    <td>{{d.hra}}</td>
+                    <td>{{d.da}}</td>
+                    <td>{{d.tax}}</td>
+                    <td>{{d.netSalary}}</td>
+                    <td>{{d.pf}}</td>
+                    <td>{{d.payDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div>
+            <button type="submit" class="btn btn-success" routerLink="/employeepage" >Back</button>
+        </div>
+    </div>
+        <ng-template #noData>No Data Available</ng-template>
+    </body>

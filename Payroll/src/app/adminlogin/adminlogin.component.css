@@ -1,0 +1,40 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #6705A8 ;
+}
+.ng-invalid:not(form){
+    border-left: 5px solid #401388 ;
+}
+
+body{
+  background-image: Linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://img.freepik.com/free-photo/high-angle-payroll-concept_23-2149103943.jpg?w=2000");
+    
+    background-repeat: no-repeat;
+    backface-visibility:hidden;
+    backdrop-filter:initial ;
+    filter: blur();
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+  }
+  
+  
+
+  h1{
+    color: white ;
+  }
+
+  label{
+    color: skyblue;
+   
+  }
+ 
+  form{
+    font-size: x-large;
+  }
+
+  button{
+    font-size: x-large;
+  }

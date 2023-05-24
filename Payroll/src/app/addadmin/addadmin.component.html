@@ -1,0 +1,104 @@
+<body>
+<div class="container-fluid mb-5">
+    <form  #deptForm="ngForm" align="center">
+        <br>
+        <h1>
+            Add a new Admin
+        </h1>
+        <br>
+        <!--<div class="form-group">
+            <label for="adminId">Customer ID <input type="number" placeholder="enter id"  class="form-control" id="customerId" required
+                [(ngModel)]="model.adminId" name="customerId " #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Id is required </div>
+            </label>    
+        </div>-->
+        <!--<nav class="navbar">
+            <input class="form-control" type="text" name="adminName" [(ngModel)]="model.adminName" (ngModelChange)="Search()"
+                placeholder="Enter Admin Id to search">            
+        </nav>-->
+           
+        <div class="form-group">
+            <label for="adminName">Admin Name <input type="text" placeholder="enter name" class="form-control" id="adminName" required
+                [(ngModel)]="model.adminName" name="adminName" #name1="ngModel">
+                <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">Name is required </div>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="email"> Email ID <input type="email" placeholder="Enter the mail" class="form-control" id="email" required
+                [(ngModel)]="model.adminEmail" name="mail" #name6="ngModel">
+                <div [hidden]="name6.valid || name6.pristine" class="alert alert-danger">mail is required </div>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="adminPassword">Password <input type="password" placeholder="enter Password" class="form-control" id="adminPassword" required
+                [(ngModel)]="model.adminPassword" name="adminPassword" #name5="ngModel">
+                <div [hidden]="name5.valid || name5.pristine" class="alert alert-danger">Password is required </div>
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success" [disabled]="!deptForm.form.valid" (click)="save()">Submit</button>
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+        </div>
+       
+    </form><br><br><br>
+</div>
+
+<!--<div class="text-center">
+
+    <div class="card" >
+    <div class="card-header text-center fs-3">Admin Details List</div>
+    <div class="card-body" >
+    <table class=" table table-success table-striped table-hover table-bordered" >
+        <thead>
+            <tr>
+                <th scope="col">adminId</th>               
+                <th scope="col">adminName</th>               
+                <th scope="col">adminEmail</th>                
+                <th scope="col">adminPassword</th>            
+            </tr>   
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let jb of adminData">      
+                <td>{{jb.adminId}}</td>        
+                <td>{{jb.adminName}}</td>        
+                <td>{{jb.adminEmail}}</td>
+                <td>{{jb.adminPassword}}</td> 
+            </tr>
+        </tbody>   
+  </table>
+
+     </div>   
+    </div>    
+    </div>
+    </body> -->
+
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <td>AdminId</td>
+                <td>AdminName  </td>
+                <td>AdminEmail</td>
+                <td>AdminPassword  </td>
+            </tr>
+        </thead>
+        <tbody *ngIf="admins | async as admins else noData ">
+            <!--<tbody *ngFor="let Admin of admins | async as admins else noData ">-->
+            <tr *ngFor="let Admin of admins ">
+                <td>{{Admin.adminId}}</td>
+                <td>{{Admin.adminName}}</td>
+                <td>{{Admin.adminEmail}}</td>
+                <td>{{Admin.adminPassword}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <ng-template #noData>No Data Available</ng-template>
+
+</body>

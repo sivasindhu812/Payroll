@@ -1,0 +1,17 @@
+body{
+  background-image: Linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://img.freepik.com/free-photo/high-angle-payroll-concept_23-2149103943.jpg?w=2000");
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    backface-visibility:hidden;
+    backdrop-filter:initial ;
+    filter: blur();
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    text-align: center;
+  }
+
+  h1{
+    color: white;
+  }

@@ -1,0 +1,41 @@
+
+form {
+    width: 300px;
+    margin: 0 auto;
+  }
+  label, input {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+  }
+  input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+    color: black;
+  }
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  button[type="submit"]:hover {
+    background-color: #3E8E41;
+  }
+  
+  body{
+    background-image: Linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://img.freepik.com/free-photo/high-angle-payroll-concept_23-2149103943.jpg?w=2000");
+      height:100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      backface-visibility:hidden;
+      backdrop-filter:initial ;
+      filter: blur();
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+    }

@@ -1,0 +1,45 @@
+<body>
+<div class="table-wrapper">
+    <br>
+    <h1>Employee Reports</h1>
+    <br>
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <td>EmployeeId</td>
+                <td>EmployeeFirstName  </td>
+                <td>EmployeeLastName</td>
+                <td>EmployeeEmail  </td>
+                <td>EmployeeMobile  </td>
+                <td>EmployeePassword  </td>
+                <td>EmployeeAddress  </td>
+                <td>EmployeeDOJ  </td>
+                <td>employeesalary  </td>
+                <td>EmployeeDesignation  </td>
+                <td>AdminId  </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let d of data;let i = index">
+                <!--<td>{{d.name}}</td>-->
+                <td>{{d.employeeId}}</td>
+                <td>{{d.employeeFirstName}}</td>
+                <td>{{d.employeeLastName}}</td>
+                <td>{{d.employeeEmail}}</td>
+                <td>{{d.employeeMobile}}</td>
+                <td>{{d.employeePassword}}</td>
+                <td>{{d.employeeAddress}}</td>
+                <td>{{d.employeeDOJ}}</td>
+                <td>{{d.employeeSalary}}</td>
+                <td>{{d.employeeDesignation}}</td>
+                <td>{{d.adminId}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+    </div>
+</div>
+    <ng-template #noData>No Data Available</ng-template>
+</body>

@@ -1,0 +1,333 @@
+
+<!--<body>
+<div class="container-fluid mb-5">
+    <form (ngSubmit)="save()" #addemployee="ngForm" align="center"><h3><b>Add Employee</b></h3></form>
+    <form #addemployee="ngForm" align="center">   
+        <div class="form-group">
+            <label for="employeefirstname">Employee FirstName
+                <input type="text" name="employeefirstname" class="form-control" ngModel>
+            </label><br>
+        </div>
+        
+        <div class="form-group">
+            <label for="employeelasttname">Employee LastName
+                <input type="text" name="employeelastname" class="form-control" ngModel></label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeEmail">Employee Email
+                <input type="email" name="employeeEmail" class="form-control" ngModel>
+            </label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeemobile">Employee Mobile
+                <input type="number" name="employeemobile" class="form-control" ngModel>
+            </label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeepassword">Employee Password
+                <input type="password" name="employeepassword" class="form-control" ngModel>
+            </label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeaddress">Employee Address
+                <input type="text" name="employeeaddress" class="form-control" ngModel>
+            </label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeedoj">Employee DOJ
+                <input type="date" name="employeedoj" class="form-control" ngModel>
+            </label><br>
+        </div>
+
+        <div class="form-group">
+            <label for="employeesalary">Employee Salary
+                <input type="number" name="employeesalary" class="form-control" ngModel>
+            </label><br>            
+        </div>
+
+        <div class="form-group">
+            <label for="employeedesignation">Employee Designation
+                <input type="text" name="employeedesignation" class="form-control" ngModel>
+            </label><br>           
+        </div>
+
+        <div class="form-group">
+            <label for="adminid">Admin Id
+                <input type="number" name="adminid" class="form-control" ngModel>
+            </label><br>  
+        </div>
+        <button class="btn btn-success" type="submit" [disabled]="!addemployee.form.valid" (click)="save">Submit</button>
+    </form>
+</div>
+</body>
+</html> -->
+<body>
+<div class="container-fluid mb-5">
+    <form  #deptForm="ngForm" align="center">
+
+        <!--<div class="form-group">
+            <label for="employeeFirstName">Employee ID <input type="number" placeholder="Enter ID"  class="form-control" id="employeeFirstName" required
+                [(ngModel)]="model.employeeId" name="employeeFirstName" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">FirstName is required</div>
+            </label>
+        </div>  -->
+        <br>
+        <h1>Add Employee</h1>
+        <br>
+        <div class="form-group">
+            <label for="employeeFirstName">Employee FirstName <input type="text" placeholder="Enter FirstName"  class="form-control" id="employeeFirstName" required
+                [(ngModel)]="model.employeeFirstName" name="employeeFirstName" #name="ngModel">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">FirstName is required</div>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="employeeLastName">Employee LastName <input type="text" placeholder="Enter LastName" class="form-control" id="employeeLastName" required
+                [(ngModel)]="model.employeeLastName" name="employeeLastName" #name1="ngModel">
+                <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">LastName is required </div>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label for="employeeEmail"> Enmployee Email <input type="email" placeholder="Enter the email" class="form-control" id="employeeEmail" required
+                [(ngModel)]="model.employeeEmail" name="employeeEmail" #name2="ngModel">
+                <div [hidden]="name2.valid || name2.pristine" class="alert alert-danger">Email is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeMobile">Employee Mobile <input type="text" placeholder="Enter Mobile Number" class="form-control" id="employeeMobile" required
+                [(ngModel)]="model.employeeMobile" name="employeeMobile" #name3="ngModel">
+                <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">Mobile Number is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeePassword">Employee Password <input type="password" placeholder="Enter Password" class="form-control" id="employeePassword" required
+                [(ngModel)]="model.employeePassword" name="employeePassword" #name4="ngModel">
+                <div [hidden]="name4.valid || name4.pristine" class="alert alert-danger">Password is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeAddress">Employee Address <input type="text" placeholder="Enter Address" class="form-control" id="employeeAddress" required
+                [(ngModel)]="model.employeeAddress" name="employeeAddress" #name5="ngModel">
+                <div [hidden]="name5.valid || name5.pristine" class="alert alert-danger"> Address is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeDOJ">Employee DOJ <input type="date" placeholder="Enter DOJ" class="form-control" id="employeeDOJ" required
+                [(ngModel)]="model.employeeDOJ" name="employeeDOJ" #name6="ngModel">
+                <div [hidden]="name6.valid || name6.pristine" class="alert alert-danger"> DOJ is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeSalary">Employee Salary <input type="text" placeholder="Enter Employee Salary" class="form-control" id="employeeSalary" required
+                [(ngModel)]="model.employeeSalary" name="employeeSalary" #name7="ngModel">
+                <div [hidden]="name7.valid || name7.pristine" class="alert alert-danger"> Salary is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="employeeDesignation">Employee Designation <input type="text" placeholder="Enter Employee Designation" class="form-control" id="employeeDesignation" required
+                [(ngModel)]="model.employeeDesignation" name="employeeDesignation" #name8="ngModel">
+                <div [hidden]="name8.valid || name8.pristine" class="alert alert-danger"> Designation is required </div>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="adminId">Admin Id <input type="number" placeholder="Enter Admin Id " class="form-control" id="adminId" required
+                [(ngModel)]="model.adminId" name="adminId" #name9="ngModel">
+                <div [hidden]="name9.valid || name9.pristine" class="alert alert-danger"> Admin Id is required </div>
+            </label>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-success" [disabled]="!deptForm.form.valid" (click)="save()">Submit</button>
+        </div>
+        
+        <br>
+        <div>
+            <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+        </div>
+    </form><br><br><br>
+</div>
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <td>EmployeeFirstName  </td>
+                <td>EmployeeLastName</td>
+                <td>EmployeeEmail  </td>
+                <td>EmployeeMobile  </td>
+                <td>EmployeePassword  </td>
+                <td>EmployeeAddress  </td>
+                <td>EmployeeDOJ  </td>
+                <td>employeesalary  </td>
+                <td>EmployeeDesignation  </td>
+                <td>AdminId  </td>
+            </tr>
+        </thead>
+        <tbody *ngIf="employees | async as employees else noData ">
+            <tr *ngFor="let Employee of employees">
+                <td>{{Employee.employeeFirstName}}</td>
+                <td>{{Employee.employeeLastName}}</td>
+                <td>{{Employee.employeeEmail}}</td>
+                <td>{{Employee.employeeMobile}}</td>
+                <td>{{Employee.employeePassword}}</td>
+                <td>{{Employee.employeeAddress}}</td>
+                <td>{{Employee.employeeDOJ}}</td>
+                <td>{{Employee.employeeSalary}}</td>
+                <td>{{Employee.employeeDesignation}}</td>
+                <td>{{Employee.adminId}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <ng-template #noData>No Data Available</ng-template>
+
+</body>
+
+<!--<div class="container">
+    <h1>Add Employee</h1>
+    <a href="#" routerLink="/order/index" class="btn btn-primary">Back</a>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="eid">Employee Id:</label>
+            <input
+                formControlName="eid"
+                id="eid"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['eid'].touched && f['eid'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eid'].errors && f['eid'].errors['required']">Employee Id is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="efName">Employee FirstName</label>
+            <textarea
+                formControlName="body"
+                id="efName"
+                type="text"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['efName'].touched && f['efName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['efName'].errors && f['efName'].errors['required']">Employee FisrtName is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="elName">Employee LastName:</label>
+            <input
+                formControlName="elName"
+                id="elName"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['elName'].touched && f['elName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['elName'].errors && f['elName'].errors['required']">Employee LastName is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eEmail">Employee Email</label>
+            <textarea
+                formControlName="eMail"
+                id="eMail"
+                type="email"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['eMail'].touched && f['eMail'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eMail'].errors && f['eMail'].errors['required']">*Employee Email is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eMobile">Employee Mobile:</label>
+            <input
+                formControlName="eMoibile"
+                id="eMobile"
+                type="number"
+                class="form-control">
+            <div *ngIf="f['eMobile'].touched && f['eMobile'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eMobile'].errors && f['eMobile'].errors['required']">Employee Mobile is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ePassword ">Employee Password </label>
+            <textarea
+                formControlName="ePassword"
+                id="ePassword "
+                type="password"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['ePassword'].touched && f['ePassword'].invalid" class="alert alert-danger">
+                <div *ngIf="f['ePassword'].errors && f['ePassword'].errors['required']">Employee Password is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eAddress">Employee Address:</label>
+            <input
+                formControlName="eAddress"
+                id="eAddress"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['eAddress'].touched && f['eAddress'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eAddress'].errors && f['eAddress'].errors['required']">Employee Address is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eDOJ">Employee DOJ</label>
+            <textarea
+                formControlName="eDOJ"
+                id="eDOJ"
+                type="date"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['eDOJ'].touched && f['eDOJ'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eDOJ'].errors && f['eDOJ'].errors['required']">Employee DOJ is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eSalary">Employee Salary</label>
+            <textarea
+                formControlName="eSalary"
+                id="eSalary"
+                type="number"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['eSalary'].touched && f['eSalary'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eSalary'].errors && f['eSalary'].errors['required']">Employee Salary is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="eDesignation">Employee Designation</label>
+            <textarea
+                formControlName="eDesignation"
+                id="eDesignation"
+                type="text"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['eDesignation'].touched && f['eDesignation'].invalid" class="alert alert-danger">
+                <div *ngIf="f['eDesignation'].errors && f['eDesignation'].errors['required']">Employee Designation is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="aid">Admin Id</label>
+            <textarea
+                formControlName="aid"
+                id="aid"
+                type="number"
+                class="form-control">
+            </textarea>
+            <div *ngIf="f['aid'].touched && f['aid'].invalid" class="alert alert-danger">
+                <div *ngIf="f['aid'].errors && f['aid'].errors['required']">Admin Id is required.</div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid" (click)="save">Submit</button>
+    </form>
+</div>  -->

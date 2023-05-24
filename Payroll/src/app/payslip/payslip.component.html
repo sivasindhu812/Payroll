@@ -1,0 +1,36 @@
+<div>
+    <label for="employeeId">Employee Id:</label>
+    <input type="number" id="employeeId" [(ngModel)]="employeeId">
+    <br>
+    <label for="employeeName">Employee Name:</label>
+    <input type="text" id="employeeName" [(ngModel)]="employeeName">
+    <br>
+    <label for="employeeDOJ">Employee DOJ:</label>
+    <input type="date" id="employeeDOJ" [(ngModel)]="employeeDOJ">
+    <br>
+    <label for="employeeGender">Employee Gender:</label>
+    <input type="text" id="employeeGender" [(ngModel)]="employeeGender">
+    <br>
+    <label for="basicSalary">Basic Salary:</label>
+    <input type="text" id="basicSalary" [(ngModel)]="basicSalary">
+    <br>
+    <label for="hra">HRA:</label>
+    <input type="text" id="hra" [(ngModel)]="hra">
+    <br>
+    <label for="da">DA:</label>
+    <input type="text" id="da" [(ngModel)]="da">
+    <br>
+    <label for="netSalary">Net Salary</label>
+    <input type="text" id="netSalary" [(ngModel)]="netSalary">
+    <br>
+    <label for="tax">Tax</label>
+    <input type="text" id="tax" [(ngModel)]="tax">
+    <br>
+    <label for="pf">PF</label>
+    <input type="text" id="pf" [(ngModel)]="pf">
+    <br>
+    <label for="payDate">Pay Date</label>
+    <input type="text" id="payDate" [(ngModel)]="payDate">
+    <br>
+    <button (click)="generatePaySlip()">Generate Pay Slip</button>
+  </div>

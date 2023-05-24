@@ -1,0 +1,40 @@
+<body>
+<div class="table-wrapper">
+    <br>
+    <h1>Employee Leaves</h1>
+    <br>
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <td>Leave Code   </td>
+                <td>Employee Id    </td>
+                <td>Leave Type       </td>
+                <td>From Date       </td>
+                <td>To Date         </td>
+                <td>Leave Reason       </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let d of data;let i = index">
+                <!--<td>{{d.name}}</td>-->
+                <td>{{d.leaveCode}}</td>
+                <td>{{d.employeeId}}</td>
+                <td>{{d.leaveType}}</td>
+                <td>{{d.fromDate}}</td>
+                <td>{{d.toDate}}</td>
+                <td>{{d.leaveReason}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+    </div>
+    <br>
+    <!--<div>
+        <button type="submit" class="btn btn-success" routerLink="/editleave" >Edit</button>
+    </div>-->
+
+</div>
+    <ng-template #noData>No Data Available</ng-template>
+</body>

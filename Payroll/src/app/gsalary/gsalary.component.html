@@ -1,0 +1,110 @@
+<body>
+    <div class="container-fluid mb-5">
+        <form  #deptForm="ngForm" align="center">
+            <h1>
+                Generate Salary
+            </h1>
+            <!--<div class="form-group">
+                <label for="employeeFirstName">Employee ID <input type="number" placeholder="Enter ID"  class="form-control" id="employeeFirstName" required
+                    [(ngModel)]="model.employeeId" name="employeeFirstName" #name="ngModel">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">FirstName is required</div>
+                </label>
+            </div>  -->
+            <div class="form-group">
+                <label for="employeeId">Employee Id <input type="number" placeholder="Enter Id"  class="form-control" id="employeeId" required
+                    [(ngModel)]="model.employeeId" name="employeeId" #name="ngModel">
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Employee Id is required</div>
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label for="basicSalary">Basic Salary <input type="text" placeholder="Enter LastName" class="form-control" id="basicSalary" required
+                    [(ngModel)]="model.basicSalary" name="basicSalary" #name1="ngModel">
+                    <div [hidden]="name1.valid || name1.pristine" class="alert alert-danger">BasicSalary is required </div>
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label for="hra"> HRA <input type="text" placeholder="Enter the HRA" class="form-control" id="hra" required
+                    [(ngModel)]="model.hra" name="hra" #name2="ngModel">
+                    <div [hidden]="name2.valid || name2.pristine" class="alert alert-danger">HRA is required </div>
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label for="da">DA <input type="text" placeholder="Enter DA" class="form-control" id="da" required
+                    [(ngModel)]="model.da" name="da" #name3="ngModel">
+                    <div [hidden]="name3.valid || name3.pristine" class="alert alert-danger">DA is required </div>
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label for="tax">Tax <input type="text" placeholder="Enter Tax" class="form-control" id="tax" required
+                    [(ngModel)]="model.tax" name="tax" #name4="ngModel">
+                    <div [hidden]="name4.valid || name4.pristine" class="alert alert-danger">Tax is required </div>
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label for="netSalary">NetSalary  <input type="text" placeholder="Enter NetSalary" class="form-control" id="netSalary" required
+                    [(ngModel)]="model.netSalary" name="netSalary" #name5="ngModel">
+                    <div [hidden]="name5.valid || name5.pristine" class="alert alert-danger"> NetSalary is required </div>
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label for="pf">PF <input type="text" placeholder="Enter PF" class="form-control" id="pf" required
+                    [(ngModel)]="model.pf" name="pf" #name6="ngModel">
+                    <div [hidden]="name6.valid || name6.pristine" class="alert alert-danger"> PF is required </div>
+                </label>
+            </div>
+    
+            <div class="form-group">
+                <label for="payDate">Pay Date <input type="date" placeholder="Enter PayDate" class="form-control" id="payDate" required
+                    [(ngModel)]="model.payDate" name="payDate" #name7="ngModel">
+                    <div [hidden]="name7.valid || name7.pristine" class="alert alert-danger"> PayDate is required </div>
+                </label>
+            </div>
+    
+            <div>
+                <button type="submit" class="btn btn-success" [disabled]="!deptForm.form.valid" (click)="save()">Submit</button>
+            </div>
+            
+            <br>
+            <div>
+                <button type="submit" class="btn btn-success" routerLink="/adminpage" >Back</button>
+            </div>
+        </form><br><br><br>
+    </div>
+ 
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <td>EmployeeID  </td>
+                    <td>BasicSalary</td>
+                    <td>HRA  </td>
+                    <td>DA  </td>
+                    <td>Tax  </td>
+                    <td>NetSalary  </td>
+                    <td>PF  </td>
+                    <td>PayDate  </td>
+                </tr>
+            </thead>
+            <tbody *ngIf="salaries | async as salaries else noData ">
+                <tr *ngFor="let Salary of salaries">
+                    <td>{{Salary.employeeId}}</td>
+                    <td>{{Salary.basicSalary}}</td>
+                    <td>{{Salary.hra}}</td>
+                    <td>{{Salary.da}}</td>
+                    <td>{{Salary.tax}}</td>
+                    <td>{{Salary.netSalary}}</td>
+                    <td>{{Salary.pf}}</td>
+                    <td>{{Salary.payDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <ng-template #noData>No Data Available</ng-template>
+    
+    </body>
